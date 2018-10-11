@@ -1,0 +1,30 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="a">我是头部</div>
+    <div id="content" class="b"></div>
+    <div class="c">我是尾巴</div>
+    <script type="text/javascript">
+    window.addEventListener('hashchange', function() {
+            var text = '';
+            switch (location.hash) {
+                case '#/music':
+                    text = '<b>i am musid</b>';
+                    break;
+                case '#/movie':
+                    text = 'i am movie0';
+                    break;
+            }
+            document.getElementById('content').innerHTML = text;
+        })
+        // document.getElementById('content').innerText = "111";
+        // alert(document.getElementById('content'))
+    </script>
+</body>
+
+</html>
